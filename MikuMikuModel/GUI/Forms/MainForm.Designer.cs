@@ -19,7 +19,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mMainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.mRightSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.mNodeTreeView = new MikuMikuModel.Nodes.Wrappers.NodeTreeView();
             this.mPropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.mMenuStrip = new System.Windows.Forms.MenuStrip();
             this.mFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -33,9 +32,10 @@
             this.mToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mCombineMotsFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mStylesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mAboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mPanel = new System.Windows.Forms.Panel();
-            this.mStylesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mNodeTreeView = new MikuMikuModel.Nodes.Wrappers.NodeTreeView();
             ((System.ComponentModel.ISupportInitialize)(this.mMainSplitContainer)).BeginInit();
             this.mMainSplitContainer.Panel2.SuspendLayout();
             this.mMainSplitContainer.SuspendLayout();
@@ -79,19 +79,6 @@
             this.mRightSplitContainer.Size = new System.Drawing.Size(260, 397);
             this.mRightSplitContainer.SplitterDistance = 181;
             this.mRightSplitContainer.TabIndex = 0;
-            // 
-            // mNodeTreeView
-            // 
-            this.mNodeTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mNodeTreeView.HideSelection = false;
-            this.mNodeTreeView.ImageIndex = 0;
-            this.mNodeTreeView.Location = new System.Drawing.Point(0, 0);
-            this.mNodeTreeView.Name = "mNodeTreeView";
-            this.mNodeTreeView.SelectedImageIndex = 0;
-            this.mNodeTreeView.SelectedNode = null;
-            this.mNodeTreeView.Size = new System.Drawing.Size(260, 181);
-            this.mNodeTreeView.TabIndex = 0;
-            this.mNodeTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.OnAfterSelect);
             // 
             // mPropertyGrid
             // 
@@ -184,8 +171,8 @@
             // mConfigurationsToolStripMenuItem
             // 
             this.mConfigurationsToolStripMenuItem.Name = "mConfigurationsToolStripMenuItem";
-            this.mConfigurationsToolStripMenuItem.Size = new System.Drawing.Size(98, 21);
-            this.mConfigurationsToolStripMenuItem.Text = "Configurations";
+            this.mConfigurationsToolStripMenuItem.Size = new System.Drawing.Size(159, 21);
+            this.mConfigurationsToolStripMenuItem.Text = "Game data configurations";
             this.mConfigurationsToolStripMenuItem.Click += new System.EventHandler(this.OnConfigurations);
             // 
             // mToolsToolStripMenuItem
@@ -200,15 +187,21 @@
             // 
             this.mCombineMotsFileToolStripMenuItem.Name = "mCombineMotsFileToolStripMenuItem";
             this.mCombineMotsFileToolStripMenuItem.Size = new System.Drawing.Size(264, 22);
-            this.mCombineMotsFileToolStripMenuItem.Text = "Combine divided .mot files into one";
+            this.mCombineMotsFileToolStripMenuItem.Text = "Join split .mot files";
             this.mCombineMotsFileToolStripMenuItem.Click += new System.EventHandler(this.OnCombineMotions);
             // 
             // mHelpToolStripMenuItem
             // 
             this.mHelpToolStripMenuItem.Name = "mHelpToolStripMenuItem";
             this.mHelpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.mHelpToolStripMenuItem.Text = "Help";
+            this.mHelpToolStripMenuItem.Text = "User guide";
             this.mHelpToolStripMenuItem.Click += new System.EventHandler(this.OnHelp);
+            // 
+            // mStylesToolStripMenuItem
+            // 
+            this.mStylesToolStripMenuItem.Name = "mStylesToolStripMenuItem";
+            this.mStylesToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
+            this.mStylesToolStripMenuItem.Text = "Styles";
             // 
             // mAboutToolStripMenuItem
             // 
@@ -226,11 +219,18 @@
             this.mPanel.Size = new System.Drawing.Size(736, 25);
             this.mPanel.TabIndex = 1;
             // 
-            // mStylesToolStripMenuItem
+            // mNodeTreeView
             // 
-            this.mStylesToolStripMenuItem.Name = "mStylesToolStripMenuItem";
-            this.mStylesToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
-            this.mStylesToolStripMenuItem.Text = "Styles";
+            this.mNodeTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mNodeTreeView.HideSelection = false;
+            this.mNodeTreeView.ImageIndex = 0;
+            this.mNodeTreeView.Location = new System.Drawing.Point(0, 0);
+            this.mNodeTreeView.Name = "mNodeTreeView";
+            this.mNodeTreeView.SelectedImageIndex = 0;
+            this.mNodeTreeView.SelectedNode = null;
+            this.mNodeTreeView.Size = new System.Drawing.Size(260, 181);
+            this.mNodeTreeView.TabIndex = 0;
+            this.mNodeTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.OnAfterSelect);
             // 
             // MainForm
             // 
@@ -242,7 +242,7 @@
             this.Controls.Add(this.mMainSplitContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Miku Miku Model";
+            this.Text = "Miku Miku Model Plus";
             this.mMainSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mMainSplitContainer)).EndInit();
             this.mMainSplitContainer.ResumeLayout(false);

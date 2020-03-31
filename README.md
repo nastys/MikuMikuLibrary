@@ -1,9 +1,9 @@
-# Miku Miku Library
+# Miku Miku Library Plus
 Format library and file editor for Hatsune Miku: Project DIVA games.
 
 # Building
-* [Stable (release) builds](https://github.com/blueskythlikesclouds/MikuMikuLibrary/releases)
-* [Unstable (development) builds](https://ci.appveyor.com/project/blueskythlikesclouds/mikumikulibrary/build/artifacts)
+* [Stable (release) builds](https://github.com/nastys/MikuMikuLibrary/releases)
+* [Unstable (development) builds](https://ci.appveyor.com/project/nastys/mikumikulibrary/build/artifacts)
 
 # Projects
 ## Miku Miku Library

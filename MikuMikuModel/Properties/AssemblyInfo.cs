@@ -4,13 +4,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "Miku Miku Model" )]
+[assembly: AssemblyTitle( "Miku Miku Model Plus" )]
 [assembly:
     AssemblyDescription(
         "This program is the GUI front-end of Miku Miku Library. It allows you to view and edit formats supported by the library, such as models, textures, motions and sprites." )]
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "" )]
-[assembly: AssemblyProduct( "Miku Miku Model" )]
+[assembly: AssemblyProduct( "Miku Miku Model Plus" )]
 [assembly: AssemblyCopyright( "Copyright © 2019 Skyth" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]

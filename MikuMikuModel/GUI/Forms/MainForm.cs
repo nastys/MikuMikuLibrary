@@ -107,7 +107,7 @@ namespace MikuMikuModel.GUI.Forms
             mStringBuilder.Append( " - Debug" );
 #endif
             mStringBuilder.AppendLine();
-            mStringBuilder.AppendLine( "This program was created by Skyth." );
+            mStringBuilder.AppendLine( "This program was created by Skyth and modified by nastys." );
 
             MessageBox.Show( mStringBuilder.ToString(), "About", MessageBoxButtons.OK );
         }
@@ -424,15 +424,17 @@ namespace MikuMikuModel.GUI.Forms
 
         protected override void OnLoad( EventArgs eventArgs )
         {
-            StoreOriginalStyle();
+            if (Type.GetType("Mono.Runtime") == null)
+            {
+                StoreOriginalStyle();
 
-            if ( StyleSet.CurrentStyle != null )
-                ApplyStyle( StyleSet.CurrentStyle );
+                if (StyleSet.CurrentStyle != null)
+                    ApplyStyle(StyleSet.CurrentStyle);
 
-            StyleSet.StyleChanged += OnStyleChanged;
+                StyleSet.StyleChanged += OnStyleChanged;
 
-            InitializeStylesToolStripMenuItem();
-
+                InitializeStylesToolStripMenuItem();
+            }
             base.OnLoad( eventArgs );
         }
 
